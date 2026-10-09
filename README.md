@@ -2,6 +2,8 @@
 
 **Early Outbreak Detection & Clinical Intelligence Platform**
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-PulseWatch-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://pulsewatchindia.vercel.app)
+
 Developed for CodeAstra 2.0 by Team Syntory.
 
 ### Team Syntory
