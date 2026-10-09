@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    background-color: #F0F2F5;
+    color: #111827;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  :focus-visible {
+    outline: 2px solid #111827;
+    outline-offset: 2px;
+  }
+}
+
+/* Modern Inspo Typography Tokens (Sentence Case & Clean Badges, No All-Caps) */
+@layer utilities {
+  .inspo-heading {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #111827;
+  }
+
+  .inspo-subheading {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #111827;
+  }
+
+  .inspo-caption {
+    font-size: 12px;
+    font-weight: 500;
+    color: #64748B;
+  }
+
+  .inspo-metric-num {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-feature-settings: "tnum" 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Soft pill badges matching inspo (+38%, -57%, etc.) */
+  .pill-green {
+    background-color: #EAF8F0;
+    color: #1EB564;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .pill-red {
+    background-color: #FDF0F2;
+    color: #E04F5F;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .pill-amber {
+    background-color: #FEF7EE;
+    color: #D97706;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  /* Tabular figures for data integrity */
+  .tabular-nums,
+  .tnum,
+  [class*="font-mono"] {
+    font-feature-settings: "tnum" 1;
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Serene Scrollbars */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #DFDFD9;
+  border-radius: 9999px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #C4C7C7;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Range input slider thumb styling */
+input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #1E1E1E;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform 0.15s ease;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+input[type=range]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #1E1E1E;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
