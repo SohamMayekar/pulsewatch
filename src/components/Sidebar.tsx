@@ -163,14 +163,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     <span>{item.label}</span>
                   </div>
 
-                  {item.badge && <span className="pill-red">{item.badge}</span>}
 
-                  {item.statusDot && (
-                    <span
-                      className="w-2 h-2 rounded-full bg-[#10B981]"
-                      title="All 6 pipelines active"
-                    />
-                  )}
                 </button>
               );
             })}
